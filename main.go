@@ -12,15 +12,15 @@ func main() {
 	fmt.Println("start main")
 	// basics()
 
-	// fmt.Println("sum3Number(1, 2, 3) =", sum3Number(1, 2, 3)) // 6
-	// fmt.Println("sum3Number(3, 5, 7) =", sum3Number(3, 5, 7)) // 15
-	// fmt.Println("sum3Number(-10, 6, 4) =", sum3Number(-10, 6, 4)) // 0
-	// fmt.Println("=====")
+	fmt.Println("sum3Number(1, 2, 3) =", sum3Number(1, 2, 3)) // 6
+	fmt.Println("sum3Number(3, 5, 7) =", sum3Number(3, 5, 7)) // 15
+	fmt.Println("sum3Number(-10, 6, 4) =", sum3Number(-10, 6, 4)) // 0
+	fmt.Println("=====")
 
-	// fmt.Println("mean3Number(1, 2, 3) =", mean3Number(1, 2, 3))       // 2.0
-	// fmt.Println("mean3Number(4, 4, 5) =", mean3Number(4, 4, 5))       // 4.333
-	// fmt.Println("mean3Number(10, 20, 50) =", mean3Number(10, 20, 50)) // 26.667
-	// fmt.Println("=====")
+	fmt.Println("mean3Number(1, 2, 3) =", mean3Number(1, 2, 3))       // 2.0
+	fmt.Println("mean3Number(4, 4, 5) =", mean3Number(4, 4, 5))       // 4.333
+	fmt.Println("mean3Number(10, 20, 50) =", mean3Number(10, 20, 50)) // 26.667
+	fmt.Println("=====")
 
 	// fmt.Println("mean(1, 2, 3) =", mean([]int{1, 2, 3}))                                    // 2.0
 	// fmt.Println("mean(10, 20, 30, 40, 50) =", mean([]int{10, 20, 30, 40, 50}))              // 30.0
@@ -126,19 +126,23 @@ func basics() {
 // sum3Number adalah jumlah dari 3 angka (basic function)
 func sum3Number(a int, b int, c int) int {
 	// write code here
-	return 0
+	return a+b+c
 }
 
 // mean3Number adalah nilai rata-rata dari 3 angka (parameter & return berbeda)
 func mean3Number(a, b, c int) float64 {
 	// write code here
-	return 0
+	return float64(a+b+c) / 3
 }
 
 // Cari nilai rata-rata data arr [1,2,3,4,5] = 3 (for-range)
 func mean(arr []int) float64 {
 	// write code here
-	return 0
+	total := 0
+	for i := 0; i < len(arr); i++ {
+		total += arr[i]
+	}
+	return float64(total) / float64(len(arr))
 }
 
 // isPalindrome check wether str is palindrome or not. "katak" = true. (for-i, if)
